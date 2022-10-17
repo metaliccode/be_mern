@@ -1,0 +1,60 @@
+https://bit.ly/be_mern
+
+installasi express :
+- install node js lts
+- git, xampp, vscode
+- node -v 
+- npm -v
+- npm init (untuk membuat package.json)
+
+Extensi : 
+- Express js
+- prettier
+- DotEnv 
+- ENV
+- npm intellesense
+- path intellesense
+
+installasi Express, mysql2, cors, morgan(log server),
+body-parser(untuk mengambil data dari form, berupa json)
+
+npm install express mysql2 cors morgan body-parser --save
+perlu nodemon untuk development :
+node index X
+
+npm install nodemon --save-dev
+kita rubah package.json :
+"scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+npm run dev
+
+helmet, compression : unutk best security http header
+npm install helmet compression --save
+
+untuk setting env : 
+npm install dotenv --save
+
+untuk database bisa kita gunakna mysql2 :
+npm install mysql2 --save
+sequelize : npm install sequelize --save
+npm i sequelize-cli --save-dev 
+
+buat cli unutk sequelize :
+buat file .sequelizerc
+./node_modules/.bin/sequelize init
+./node_modules/.bin/sequelize-cli init
+setting di package json
+
+npm run sequelize init
+cara membuat model menggunakna sequelize-cli :
+npx sequelize-cli model:generate --name Contact --attributes name:string,nohp:string,address:string --underscored
+
+npm run sequelize-cli -- model:generate --name Contact --attributes name:string,nohp:string,address:string --underscored
+
+khusus untuk pak ipul :
+npm run ./node_modules/.bin/sequelize-cli -- model:generate --name Contact --attributes name:string,nohp:string,address:string --underscored
+
+npm run sequelize-cli -- db:migrate
+
